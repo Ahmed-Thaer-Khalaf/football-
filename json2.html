@@ -1,0 +1,76 @@
+<!DOCTYPE html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><script src="angular.min.js"></script><link rel="stylesheet" href="json.css" type="text/css"/><link rel="stylesheet" href="id.css" type="text/css"/>
+  <script src="https://raw.githubusercontent.com/wvn-sport/football-/master/namesController.js"></script>
+   <script src="json.js"></script >
+
+</head>
+<body>
+  
+ 
+<div ng-app="wvn" ng-controller="titles">
+<div ng-repeat="wvn in home">
+ 
+<a  href="#v-{{wvn.id}}">
+<img class= "img" src= "{{wvn.image}}">
+</a>
+<div id= "in">
+<div id= "wg"><img class= "wg" src="{{wvn.img}}"></div>
+
+<div id= "we">{{wvn.title}}</div>
+<div id= "ur">{{wvn.user + ' ' + wvn.data }}</div>
+</div>
+
+  <div id="v-{{wvn.id}}">
+  
+
+<video autoplay loop muted  class= "cs"  id="videoPlayer"src="file:///sdcard/Download/wvn/{{wvn.video}}.mp4" width="100%"height="202.5px"
+
+        ontimeupdate="progressUpdate()">
+
+    </video>
+
+ 
+
+    
+<div style= "height:8px;"></div>
+ 
+	<div id="title-1">
+	<div id= "title-name-1">{{wvn.title}}</div>
+
+
+		<div id= "dg"><img class= "dg" src= "_down.png"></div>
+
+	</div>
+	<div style= "height:44px;"></div>
+	
+	<div  id="liner-2">
+	
+	<div  id= "like"><img class= "like" src="like.png">
+	<r>أعجبني</r>
+	</div>
+	
+	<div  id= "down-like"><img class= "down-like" src= "down like.png">
+	<r>لايعجبني</r>
+	</div>
+	<a href="file:///sdcard/Download/wvn/{{wvn.video}}.mp4">
+	<div  id= "download"><img class= "download" src= "download.png">
+	<r>تنزيل</r>
+	</div></a>
+	
+	<div  id= "live"><img class="live" src= "live.png">
+	<r>البث</r>
+	</div>
+	</div>
+	
+	<div id="liner">
+	<div id="img-p"><img class= "img-p" src= "{{wvn.img}}"></div>
+	<div id="name-p">{{wvn.user}}</div>
+	</div>
+	
+   <a href="#" class="cancel">×</a> </div>
+  <div id="cover" > </div>
+  
+  
+  </div>
+</div>
+</body>
+</html>
