@@ -31,7 +31,7 @@ angular.module('wvn', []).controller('titles', function($scope) {
 
         ,id:'2'
 
-        ,user:'البشير شو'
+        ,user:'احمد ثائر'
         
         ,img:'img.jpg'
 
